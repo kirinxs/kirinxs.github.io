@@ -44,9 +44,11 @@
         <li> <a href="http://github.com/mojombo/god/commit/be6a8cc1c1ecfe9489fb51e4869af15a13fc2cd2">Add more things&nbsp;</a></li>
         <li> <a href="http://github.com/mojombo/god/commit/be6a8cc1c1ecfe9489fb51e4869af15a13fc2cd2">Optimize web pages&nbsp;</a></li>
         </ul>
-        <pre><code>&lt;div class="footer"&gt;
-    &amp;copy; 2004 Foo Corporation
-&lt;/div&gt;</code></pre>
+               <div class="highlight">
+        <pre><span class="nb">require</span> <span class="s1">'redcarpet'</span>
+<span class="n">markdown</span> <span class="o">=</span> <span class="no">Redcarpet</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="s2">"Hello World!"</span><span class="p">)</span>
+<span class="nb">puts</span> <span class="n">markdown</span><span class="o">.</span><span class="n">to_html</span></pre>
+        </div>
         <h2>My thought&nbsp;</h2>
         <h3>Think different.&nbsp;</h3>
         <blockquote>
