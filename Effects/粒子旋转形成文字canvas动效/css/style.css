@@ -1,0 +1,13 @@
+body {
+    margin: 0; 
+    overflow: hidden;
+}
+
+a {
+    position: fixed;
+    display: inline-block;
+    margin-left: calc(50vw - 70px);
+    font-size:20px;
+    z-index:1;
+    color: white;
+}
