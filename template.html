@@ -12,8 +12,6 @@
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-<link rel="stylesheet" href="//cdn.bootcss.com/gitalk/1.7.2/gitalk.min.css">
-<script src="//cdn.bootcss.com/gitalk/1.7.2/gitalk.min.js"></script>
 <script>
   !function(g,s,q,r,d){r=g[r]=g[r]||function(){(r.q=r.q||[]).push(arguments)};
   d=s.createElement(q);d.src='//d1l6p2sc9645hc.cloudfront.net/gosquared.js';q=
@@ -41,6 +39,34 @@
       <p>A quick brown fox jumps over a lazy dog.</p>
     </section>
     </div>
+      <div id="gitalk-container"></div>
+    </div>
+    <script src="https://unpkg.com/gitalk@latest/dist/gitalk.min.js"></script>
+    <script type="text/javascript">
+      var gitalk = new Gitalk({
+        clientID: '177d2b189fc5d08c0246',
+        clientSecret: '32affb4b131c9e6f7eed3a90b4b4e8cb31d7eedb',
+        repo: 'kirinxs.github.io',
+        owner: 'kirinxs',
+        admin: ['kirinxs'],
+        id: 'Demo',
+        distractionFreeMode: true
+      });
+      gitalk.render('gitalk-container');
+
+      var language = navigator.language || navigator.userLanguage;
+      var intro = document.getElementsByClassName('hero-intro')[0];
+      var beginBtn = document.getElementsByClassName('btn-begin')[0];
+      var demo = document.getElementsByClassName('demo')[0];
+      if (language === 'zh-TW') {
+        intro.innerText = '一個基於 Github Issue 和 Preact 開發的評論插件';
+        beginBtn.innerText = '開始使用';
+      } else if (!~language.indexOf('zh')) {
+        intro.innerText = 'A modern comment component based on Github Issue and Preact';
+        beginBtn.innerText = 'GET STARTED';
+        demo.innerText = 'Demo';
+      }
+    </script>
     <footer>
       <p>Project maintained by Sirius</a></p>
       <p>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></p>
